@@ -29,6 +29,7 @@ Fonts are separated by a & */
     --nav-hover-link-color: rgb(19, 19, 206);
     --nav-hover-background-color: #1b3344;
 
+
     /* Body */
     body {
         font-family: Raleway, Arial, sans-serif;
@@ -39,10 +40,16 @@ Fonts are separated by a & */
         /* Set background to black */
     }
 
+    #content {
+        max-width: 16000px;
+        margin: 0 auto;
+    }
+
     /* Header */
     header {
         display: grid;
         grid-template-columns: 150px auto;
+        font-family: Arial, Helvetica, sans-serif;
         background-color: rgba(20, 30, 13, 0.7);
     }
 
@@ -50,6 +57,16 @@ Fonts are separated by a & */
         padding-top: 5px;
         justify-self: center;
         align-self: center;
+        grid-column: 1/2;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .icon {
+        width: 80px;
+        padding-top: 10px;
     }
 
     /* Navigation */
@@ -91,7 +108,12 @@ Fonts are separated by a & */
 
     #hero-msg h4 {
         color: white;
+        text-align: center;
         /* Original color */
+    }
+
+    #hero-img {
+        width: 100%;
     }
 
     /* Main Section */
@@ -123,6 +145,7 @@ Fonts are separated by a & */
     #background {
         grid-column: 1/11;
         grid-row: 4/9;
+        height: 725px;
     }
 
     .mountains {
@@ -181,8 +204,9 @@ Fonts are separated by a & */
         }
 
         nav a {
-            display: block;
-            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            grid-column: 2/3;
         }
 
         #hero {
@@ -193,17 +217,17 @@ Fonts are separated by a & */
             margin-top: 0;
         }
 
-        #hero-msg h4 {
-            display: none;
-        }
 
         #hero-msg h1 {
             color: #6f7364;
+            text-align: center;
+            font-family: Rock Salt, Arial, Helvetica, sans-serif;
             /* Original color for h1 */
         }
 
         .home-title {
-            font-size: 25px;
+            font-size: 2em;
+            margin: 5px;
         }
 
         .rivers-card,
@@ -227,4 +251,23 @@ Fonts are separated by a & */
         footer {
             margin-top: 25px;
         }
+    }
+
+    h2 {
+        font-family: Rock Salt, Arial, Helvetica, sans-serif;
+        margin: 0;
+    }
+
+    .button-box {
+        text-align: center;
+    }
+
+    main section {
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .book,
+    .join {
+        background-color: ;
     }
