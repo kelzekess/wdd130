@@ -269,5 +269,20 @@ Fonts are separated by a & */
 
     .book,
     .join {
-        background-color: ;
+        transition: transform .3s;
+        background-color: #fcfbfb;
+        color: #000000;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 15px 30px;
+        margin: 50px;
+        border-radius: 4px;
+    }
+
+    .book:hover,
+    .join:hover {
+        background-color: aqua;
+        transform: scale(1.05);
+
     }
