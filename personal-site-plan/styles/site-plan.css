@@ -1,82 +1,182 @@
-/* if you are using any Google fonts change the font names below to your fonts. 
-Any spaces in your font name should be replaced with a +. 
-Fonts are separated by a | */
+/* Google Fonts - Change to your desired fonts */
 @import url('https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato');
 
 :root {
-  /* change the values below to your colors from your palette */
-  --primary-color: #396E94   ;
-  --secondary-color: #E7C24F ;
+  /* Colors from your palette */
+  --primary-color: #396E94;
+  --secondary-color: #E7C24F;
   --accent1-color: #A42212;
   --accent2-color: white;
 
-  /* change the values below to your chosen font(s) */
+  /* Fonts */
   --heading-font: "IM Fell French Canon SC";
   --paragraph-font: Lato, Helvetica, sans-serif;
 
-  /* these colors below should be chosen from among your palette colors above */
-  --headline-color-on-white: #396E94;  /* headlines on a white background */ 
-  --headline-color-on-color: white; /* headlines on a colored background */ 
-  --paragraph-color-on-white: #396E94; /* paragraph text on a white background */ 
-  --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
-  --paragraph-background-color: #396E94  ;
+  /* Additional color settings */
+  --headline-color-on-white: #396E94;
+  /* Headlines on white background */
+  --headline-color-on-color: white;
+  /* Headlines on colored background */
+  --paragraph-color-on-white: #396E94;
+  /* Paragraph text on white background */
+  --paragraph-color-on-color: white;
+  /* Paragraph text on colored background */
+  --paragraph-background-color: #396E94;
   --nav-link-color: #396E94;
   --nav-background-color: #D4AC0D;
   --nav-hover-link-color: white;
   --nav-hover-background-color: #396E94;
 }
 
-
-/*  Look around below...but DON'T CHANGE ANYTHING! */
-
+/* General styles */
 body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 4em;
   font-size: 18px;
   text-align: center;
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  background-color: var(--accent2-color);
+  line-height: 1.75;
+  /* Improved line spacing */
 }
+
 img {
   display: block;
   margin: 0 auto;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--heading-font);
   color: var(--headline-color-on-white);
+  margin-bottom: 0.5em;
 }
+
+h1 {
+  font-size: 2.5em;
+  color: var(--headline-color-on-color);
+}
+
 h2 {
+  font-size: 2em;
+  color: var(--headline-color-on-white);
   text-align: center;
 }
+
+/* Horizontal rule styling */
 hr {
   height: 3px;
   margin: 35px 0;
   background: var(--accent1-color);
 }
+
+/* Header Styling */
 header {
   padding: 1em;
   text-align: center;
   color: var(--headline-color-on-color);
   background-color: var(--paragraph-background-color);
 }
-header > h1, header > h2 {
+
+header>h1,
+header>h2 {
   color: var(--headline-color-on-color);
 }
 
+/* Paragraphs */
 p {
   font-family: var(--paragraph-font);
   color: var(--paragraph-color-on-white);
   padding: 1em;
+  font-size: 1.125em;
+  /* Slightly larger text for readability */
+  margin: 1em 0;
 }
+
+/* Navigation Styling */
+nav {
+  display: flex;
+  justify-content: center;
+  /* Center align the nav links */
+  align-items: center;
+  /* Vertically center the links */
+  background-color: var(--nav-background-color);
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+nav a {
+  padding: 10px;
+  min-width: 120px;
+  text-decoration: none;
+  color: var(--nav-link-color);
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+/* Sitemap Grid */
+.sitemap {
+  display: grid;
+  gap: 20px;
+  /* Add spacing between elements */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  /* Responsive layout */
+  justify-content: center;
+}
+
+.sitemap>div {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  color: var(--headline-color-on-color);
+  border-radius: 5px;
+  /* Rounded corners */
+}
+
+.sm-home,
+.sm-page2,
+.sm-page3 {
+  line-height: 3em;
+  background-color: #ccc;
+}
+
+.top {
+  border-left: 1px solid;
+}
+
+.left {
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.right {
+  border-top: 1px solid;
+  border-right: 1px solid;
+}
+
+/* Color Palette Table */
 .colors {
   width: 100%;
   min-width: 350px;
   margin: 30px auto;
   text-align: center;
 }
+
 .colors th {
   background-color: #999;
 }
-.colors td{
+
+.colors td {
   width: 25%;
   height: 3em;
 }
@@ -84,92 +184,52 @@ p {
 .primary {
   background-color: var(--primary-color);
 }
+
 .secondary {
   background-color: var(--secondary-color);
 }
+
 .accent1 {
   background-color: var(--accent1-color);
 }
-.accent2{
+
+.accent2 {
   background-color: var(--accent2-color);
 }
 
+/* Colored Paragraph */
 p.colored {
   background-color: var(--paragraph-background-color);
   color: var(--paragraph-color-on-color);
 }
 
-nav {
-  background-color: var(--nav-background-color);
-  line-height: 3em;
-  text-align: center;
-  font-size: 1.2em;
-}
-nav  {
-  list-style-type: none;
+/* Image Container Layout */
+.image-container {
   display: flex;
-
-}
-nav a {
-  padding:1em;
-  min-width: 120px;
-  text-decoration: none;
-  padding: 10px;
-
-}
-nav a:link, nav a:visited {
-  color: var(--nav-link-color);
-}
-nav a:hover {
-  color: var(--nav-hover-link-color);
-  background-color: var(--nav-hover-background-color);
-}
-
-.sitemap {
-  display: grid;
+  flex-wrap: wrap;
+  /* Wrap images if they exceed available space */
   justify-content: center;
-
-  grid-template-columns: repeat(6, 15%);
-  grid-template-rows: 3em 1.5em 1.5em 3em;
-  grid-template-areas: ". . home home . ."
-    ". . . top . ."
-    ". left left right right ."
-    "page2 page2 . . page3 page3";
+  /* Center the images horizontally */
+  gap: 20px;
+  /* Add spacing between images */
+  margin: 20px 0;
 }
-.sitemap > div {
 
+.image-container img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+}
+
+/* Footer Styling (Optional) */
+footer {
+  background-color: var(--primary-color);
+  color: var(--headline-color-on-color);
   text-align: center;
-
-}
-.sm-home {
-  grid-area: home;
-  background-color: #ccc;
-  line-height: 3em;
-}
-.sm-page2 {
-  grid-area: page2;
-  background-color: #ccc;
-  line-height: 3em;
-}
-.sm-page3 {
-  grid-area: page3;
-  background-color: #ccc;
-  line-height: 3em;
-}
-
-.top {
-  grid-area: top;
-  border-left: 1px solid;
-}
-
-.left {
-  grid-area: left;
-  border-top: 1px solid;
-  border-left: 1px solid;
-}
-
-.right {
-  grid-area: right;
-  border-top: 1px solid;
-  border-right: 1px solid;
+  padding: 20px;
+  margin-top: 20px;
+  font-size: 0.9em;
 }
