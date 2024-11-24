@@ -286,3 +286,97 @@ Fonts are separated by a & */
         transform: scale(1.05);
 
     }
+
+    /* FAQ Section Styling */
+    #faq-section {
+        padding: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        color: var(--accent2-color);
+    }
+
+    .faq-item {
+        background-color: #1b3344;
+        /* A darker background for contrast */
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 5px 5px 10px #6f7364;
+    }
+
+    .faq-item h3 {
+        font-family: var(--heading-font);
+        font-size: 1.3em;
+        color: var(--accent1-color);
+        margin-bottom: 15px;
+    }
+
+    .faq-item p {
+        font-family: var(--paragraph-font);
+        font-size: 1.1em;
+        color: var(--paragraph-color-on-color);
+    }
+
+    .faq-item:hover {
+        background-color: var(--secondary-color);
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 900px) {
+        #faq-section {
+            padding: 20px;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .faq-item h3 {
+            font-size: 1.1em;
+        }
+
+        .faq-item p {
+            font-size: 1em;
+        }
+    }
+
+    #faq-section {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .faq-item {
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .faq-item h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .faq-item p {
+        font-size: 1em;
+        line-height: 1.5;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    footer a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    footer .social a {
+        margin: 0 5px;
+    }
