@@ -380,3 +380,111 @@ Fonts are separated by a & */
     footer .social a {
         margin: 0 5px;
     }
+
+    #contact-us-section {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    #contact-us-section h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    #contact-us-section h2 {
+        font-size: 1.8em;
+        margin-top: 20px;
+    }
+
+    form {
+        margin-top: 20px;
+    }
+
+    form label {
+        display: block;
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 1.1em;
+        margin-bottom: 15px;
+    }
+
+    form button {
+        background-color: #2d84b6;
+        /* Blue color */
+        color: white;
+        padding: 10px 20px;
+        font-size: 1.1em;
+        border: none;
+        cursor: pointer;
+    }
+
+    form button:hover {
+        background-color: #1d6b8b;
+    }
+
+    /* Set the default text color to white for better contrast on black background */
+    body {
+        color: white;
+        background-color: black;
+        /* Ensures background stays black */
+    }
+
+    /* Set text color in the contact-us section specifically */
+    #contact-us-section {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        color: white;
+        /* Ensure text color is white in this section */
+    }
+
+    #contact-us-section h1,
+    #contact-us-section h2 {
+        color: #2d84b6;
+        /* Blue headers for a contrast with the black background */
+    }
+
+    /* Form elements - adjust input, textarea colors as well */
+    form label {
+        color: white;
+        /* Label color */
+    }
+
+    form input,
+    form textarea {
+        background-color: #333;
+        /* Dark background for input fields */
+        color: white;
+        /* White text in input fields */
+        border: 1px solid #555;
+        /* Light border for input fields */
+    }
+
+    form button {
+        background-color: #2d84b6;
+        /* Blue button background */
+        color: white;
+        /* White button text */
+    }
+
+    form button:hover {
+        background-color: #1d6b8b;
+    }
+
+    /* Links and social media icons */
+    a {
+        color: #2d84b6;
+        /* Blue color for links */
+    }
+
+    a:hover {
+        color: #1d6b8b;
+        /* Darker blue on hover */
+    }
