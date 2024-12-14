@@ -1,32 +1,39 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato');
 
-/* Root Variables */
 :root {
-  --primary-color: #396E94;
-  /* Blue */
-  --secondary-color: #E7C24F;
-  /* Yellow */
-  --accent1-color: #A42212;
-  /* Red */
-  --accent2-color: #FFFFFF;
-  /* White */
-  --heading-font: "IM Fell French Canon SC", serif;
-  --paragraph-font: "Lato", Helvetica, sans-serif;
-  --text-on-dark: #FFFFFF;
-  --text-on-light: #000000;
+  /* Color Palette */
+  --primary-color: #396E94; /* Blue for hope and children */
+  --secondary-color: #E7C24F; /* Yellow */
+  --accent1-color: #A42212; /* Red */
+  --accent2-color: white; /* White */
+
+  /* Typography */
+  --heading-font: "IM Fell French Canon SC";
+  --paragraph-font: Lato, Helvetica, sans-serif;
+
+  /* Text Colors */
+  --headline-color-on-white: #396E94; /* Headlines on a white background */
+  --headline-color-on-color: white; /* Headlines on a colored background */
+  --paragraph-color-on-white: #396E94; /* Paragraph text on a white background */
+  --paragraph-color-on-color: white; /* Paragraph text on a colored background */
+  --paragraph-background-color: #396E94; /* Background color for paragraphs */
+  --nav-link-color: #396E94; /* Navigation link color */
+  --nav-background-color: #D4AC0D; /* Navigation background color */
+  --nav-hover-link-color: white; /* Hover color for links */
+  --nav-hover-background-color: #396E94; /* Hover background color */
 }
 
-/* Global Styles */
+/* General Styles */
 body {
+  background-color: #000000; /* Black background */
+  color: white; /* White text */
   font-family: var(--paragraph-font);
-  background-color: #000000;
-  /* Black background */
-  color: var(--text-on-dark);
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
+  font-size: 18px;
+  margin: 0 auto;
+  padding: 4em;
+  max-width: 1200px;
+  text-align: center;
 }
 
 h1,
@@ -36,163 +43,195 @@ h4,
 h5,
 h6 {
   font-family: var(--heading-font);
-  color: var(--primary-color);
-  margin: 1rem 0;
+  color: var(--headline-color-on-white);
 }
 
 h2 {
   text-align: center;
-  text-transform: uppercase;
 }
 
 hr {
-  border: 0;
   height: 3px;
+  margin: 35px 0;
   background: var(--accent1-color);
-  margin: 2rem 0;
 }
 
-/* Header Styles */
 header {
+  padding: 1em;
   text-align: center;
-  padding: 1.5rem;
-  background: var(--primary-color);
-  color: var(--text-on-dark);
+  color: var(--headline-color-on-color);
+  background-color: var(--paragraph-background-color);
 }
 
-header h1,
-header h2 {
-  margin: 0.5rem 0;
+header>h1,
+header>h2 {
+  color: var(--headline-color-on-color);
 }
 
-header h1 {
-  font-size: 2rem;
-}
-
-header h2 {
-  font-size: 1.2rem;
-}
-
-/* Paragraph Styles */
 p {
-  margin: 1rem 0;
-  padding: 0 1rem;
-  color: var(--text-on-dark);
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  padding: 1em;
 }
 
-/* Image Styles */
+/* Image Styling */
 img {
   display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 1rem auto;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px; /* Limit maximum image width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Color Palette Styles */
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.colors th,
+.colors td {
+  padding: 1em;
+  border: 1px solid var(--accent2-color);
+}
+
+.primary {
+  background-color: var(--primary-color);
+}
+
+.secondary {
+  background-color: var(--secondary-color);
+}
+
+.accent1 {
+  background-color: var(--accent1-color);
+}
+
+.accent2 {
+  background-color: var(--accent2-color);
 }
 
 /* Navigation Styles */
 nav {
+  background-color: var(--nav-background-color);
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.2em;
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  background-color: var(--secondary-color);
-  padding: 0.5rem 0;
+  justify-content: center; /* Align the links horizontally */
+  list-style-type: none;
 }
 
 nav a {
+  padding: 1em;
+  min-width: 120px;
   text-decoration: none;
-  color: var(--primary-color);
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  transition: all 0.3s ease;
+  color: var(--nav-link-color);
 }
 
 nav a:hover {
-  background-color: var(--primary-color);
-  color: var(--accent2-color);
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
 }
 
-/* Programs Section */
-.programs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+/* Sitemap Styles */
+.sitemap {
+  display: grid;
   justify-content: center;
-  margin: 2rem 0;
-}
-
-.program {
-  background: var(--primary-color);
-  color: var(--text-on-dark);
-  padding: 1rem;
-  border-radius: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 10px;
   text-align: center;
-  max-width: 300px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.program img {
-  border-radius: 8px;
-  margin-bottom: 1rem;
+.sitemap>div {
+  background-color: #ccc;
+  line-height: 3em;
 }
 
-.program h3 {
-  margin: 0.5rem 0;
-  font-size: 1.2rem;
-  color: var(--accent2-color);
+.sm-home,
+.sm-page2,
+.sm-page3 {
+  background-color: #ccc;
 }
 
-.program p {
-  font-size: 0.9rem;
+.sm-home {
+  grid-area: home;
 }
 
-/* Footer and Contact Links */
-footer,
-.contact-info {
-  text-align: center;
-  margin: 2rem 0;
+.sm-page2 {
+  grid-area: page2;
 }
 
-footer p,
-.contact-info a {
-  color: var(--text-on-dark);
-  font-size: 0.9rem;
+.sm-page3 {
+  grid-area: page3;
 }
 
-/* Buttons */
-button {
-  background: var(--secondary-color);
-  border: none;
-  padding: 0.7rem 1.2rem;
-  color: var(--primary-color);
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+.top {
+  grid-area: top;
+  border-left: 1px solid;
 }
 
-button:hover {
-  background: var(--primary-color);
-  color: var(--accent2-color);
+.left {
+  grid-area: left;
+  border-top: 1px solid;
+  border-left: 1px solid;
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  body {
-    padding: 1rem;
-  }
+.right {
+  grid-area: right;
+  border-top: 1px solid;
+  border-right: 1px solid;
+}
 
-  header h1 {
-    font-size: 1.5rem;
-  }
+/* Wireframe Images Styling */
+img[src$="wireframe.png"] {
+  width: 80%; /* Ensure wireframe images are resized */
+  margin: 20px 0;
+}
 
-  nav {
-    flex-direction: column;
-  }
+/* Site-Specific Adjustments */
+.sitemap {
+  grid-template-columns: repeat(6, 15%);
+  grid-template-areas: ". . home home . ."
+    ". . . top . ."
+    ". left left right right ."
+    "page2 page2 . . page3 page3";
+}
 
-  .programs {
-    flex-direction: column;
-  }
+.sm-home {
+  grid-area: home;
+  background-color: #ccc;
+  line-height: 3em;
+}
 
-  nav a {
-    padding: 0.5rem;
-  }
+.sm-page2 {
+  grid-area: page2;
+  background-color: #ccc;
+  line-height: 3em;
+}
+
+.sm-page3 {
+  grid-area: page3;
+  background-color: #ccc;
+  line-height: 3em;
+}
+
+.top {
+  grid-area: top;
+  border-left: 1px solid;
+}
+
+.left {
+  grid-area: left;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.right {
+  grid-area: right;
+  border-top: 1px solid;
+  border-right: 1px solid;
 }
