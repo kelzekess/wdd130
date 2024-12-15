@@ -136,7 +136,7 @@ button:hover {
 }
 
 .volunteer img {
-  max-width: 80%;
+  max-width: 30%;
   border-radius: 8px;
   margin-top: 1rem;
 }
@@ -269,4 +269,13 @@ form button {
 
 form button:hover {
   background-color: var(--accent1-color);
+}
+/* Ensures the image stays contained and responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centers the image horizontally */
+  border-radius: 8px; /* Optional: Adds rounded corners for a polished look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
 }
